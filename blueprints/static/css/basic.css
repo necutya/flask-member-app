@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 50px;
+    width: 100vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    margin: .5em 0;
+    color: #04AA6D;
+}
+
+.messages {
+    min-width: 40%;
+    width: fit-content;
+}
+
+.messages div {
+    width: 100%;
+    padding: 10px 14px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.messages .success {
+    border: 1px solid #04AA6D;
+    background-color: #7cde9b;
+}
+
+.messages .fail {
+    border: 1px solid red;
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.messages .icon-cross {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+ul.errors {
+    list-style: none;
+    font-size: small;
+    color: red;
+}
+
+input[type=text].error, input[type=email].error {
+    border: 1px solid red;
+}

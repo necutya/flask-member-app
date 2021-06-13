@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/basic.css') }}">
+    {% block extra_styles %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="messages">
+    </div>
+    {% block content %}
+    {% endblock %}
+
+    <script src="https://kit.fontawesome.com/6c2c37fab8.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/basic.js') }}"></script>
+    {% block extra_scripts %}
+    {% endblock %}
+</div>
+</body>
+</html>

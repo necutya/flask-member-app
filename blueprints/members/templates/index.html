@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block extra_styles %}
+    <link rel="stylesheet" href="{{ url_for('.static', filename='css/member.css') }}">
+{% endblock %}
+
+{% block content %}
+    <h2>
+        Welcome to the club, buddy!
+    </h2>
+
+    <div class="new-member">
+        <h3 style="text-align: left">
+            New member
+        </h3>
+
+        {% from "_formhelpers.html" import render_field %}
+        <form method="POST" class="member-form">
+            {{ form.csrf_token  }}
+            {{ render_field(form.name) }}
+            {{ render_field(form.email) }}
+            <div class="buttons">
+                <button data-url="{{ url_for('member_bp.index') }}" class="member-add">Add</button>
+                <button class="clear-btn">Clear</button>
+            </div>
+        </form>
+    </div>
+
+    <h3>
+        Members
+    </h3>
+
+    <table class="members">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Registration date</th>
+        </tr>
+        {% for member in members %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ member.name }}</td>
+                <td>{{ member.email }}</td>
+                <td>{{ member.registration_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% block extra_scripts %}
+    <script src="{{ url_for('.static', filename='js/add-member.js') }}"></script>
+{% endblock %}

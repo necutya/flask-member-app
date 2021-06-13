@@ -1,0 +1,56 @@
+table, th, td {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+}
+
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #7cde9b;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.members {
+    margin: 5px 20px;
+    width: 60vw;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons button {
+    background-color: #7cde9b;
+    border: 1px solid #7cde9b;
+    padding: 5px 7px;
+    margin: 0 2px;
+    font-size: 16px;
+}
+
+.new-member {
+    align-self: flex-start;
+}
+
+input[name="name"], input[name="email"] {
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+}
+
+input[type=text], select {
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

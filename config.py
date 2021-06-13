@@ -26,9 +26,22 @@ class Config(object):
 
 
 class ProductionConfig(Config):
+    """
+    Configuration for production
+    """
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 
 class DevelopmentConfig(Config):
+    """
+    Configuration for development
+    """
     DEBUG = True
+
+
+class TestingConfig(Config):
+    """
+    Configuration for testing
+    """
     TESTING = True
+    WTF_CSRF_ENABLED = False
